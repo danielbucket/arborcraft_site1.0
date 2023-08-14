@@ -1,0 +1,43 @@
+.navbar-container {
+	grid-row: nav-bar;
+	grid-column-start: logo;
+	grid-column-end: column-end;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	background-color: var(--ac-brown);
+	width: 100%;
+}
+
+.navbar-option {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+
+	font-family: RobotoFlex;
+	letter-spacing: .1em;
+	font-size: 1.4em;
+	font-weight: 500;
+	color: var(--ac-green);
+	box-shadow: 0 0 var(--ac-green);
+	border-radius: .12em;
+	padding: 0.01em 0.01em;
+
+	transition:
+		padding .75s,
+		box-shadow .5s,
+		font-size 1s,
+		width .5s,
+		margin-top .5s,
+		font-weight .5s;
+}
+
+.navbar-option:hover {
+	font-size: 2em;
+	font-weight: 725;
+	padding: 0.01em 0.18em;
+	margin-top: auto;
+	cursor: pointer;
+	box-shadow: 0 0 0.1em 0.18em var(--ac-green-opaque);
+
+}

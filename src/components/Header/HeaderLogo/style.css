@@ -1,0 +1,10 @@
+.company-logo {
+	display: grid;
+	grid-column: logo;
+	grid-row: logo-contact;
+	height: 14em;
+	padding: 0.25em 0 0.25em 0.5em;
+	margin-right: 1em;
+}
+
+
