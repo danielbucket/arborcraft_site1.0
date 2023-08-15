@@ -7,6 +7,12 @@ const foooterLogoData = [
 		href: "https://goldenchamber.org/",
 	},
 	{
+		name: "Github",
+		src: require('../../assets/images/github/github-mark.svg'),
+		alt: "Github logo",
+		href: "https://github.com/danielbucket",
+	},
+	{
 		name: "International Society of Aboriculture",
 		src: require('../../assets/images/ISA_members.jpg'),
 		alt: "International Society of Aboriculture",
