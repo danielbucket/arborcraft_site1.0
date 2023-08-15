@@ -1,12 +1,11 @@
 import { Loader } from '@googlemaps/js-api-loader';
-const key = "AIzaSyBPaY6yBroGscbh8TcRu8YgYvDeHQr3GgI";
-
+const { GMAPS_KEY } = require('../../../gMapsKey.js');
 
 export default function Map_2() {
   let map;
 
   const loader = new Loader({
-    apiKey: key,
+    apiKey: GMAPS_KEY,
     version: "weekly",
   });
 
