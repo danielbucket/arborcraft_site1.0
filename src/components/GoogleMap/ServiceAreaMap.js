@@ -18,8 +18,8 @@ export default function ServiceAreaMap() {
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-    const map = new Map(document.getElementById("map"), {
-      zoom: 9.5,
+    const map = new Map(document.getElementById("service_map"), {
+      zoom: 9.75,
       center: mapCenter,
       mapId: "GOLDEN_CO_MAP",
     });
@@ -27,7 +27,7 @@ export default function ServiceAreaMap() {
     const serviceArea = new google.maps.Polyline({
       path: mapAreaCoordinates,
       geodesic: true,
-      strokeColor: "#FF0000",
+      strokeColor: "#594A42",
       strokeOpacity: 1.0,
       strokeWeight: 2,
     });
