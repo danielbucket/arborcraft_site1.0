@@ -17,6 +17,7 @@ export default function ServiceAreaMap() {
   loader.load().then(async () => {
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const { Rectangle } = await google.maps.importLibrary("maps");
 
     const map = new Map(document.getElementById("service_map"), {
       zoom: 9.75,
@@ -27,7 +28,7 @@ export default function ServiceAreaMap() {
     const serviceArea = new google.maps.Polyline({
       path: mapAreaCoordinates,
       geodesic: true,
-      strokeColor: "#594A42",
+      strokeColor: "#AAC27E",
       strokeOpacity: 1.0,
       strokeWeight: 2,
     });
@@ -39,7 +40,13 @@ export default function ServiceAreaMap() {
       content: markerIcon,
     });
 
-    serviceArea.setMap(map);
+    const shadedArea = new Rectangle({
+      map: map,
+      fillColor: "#AAC27E",
+      fillOpacity: 0.35,
+      tile: "service area shaded area on map",
+    });
 
+    serviceArea.setMap(map);
   });
 };

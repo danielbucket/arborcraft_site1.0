@@ -19,4 +19,12 @@ const navbarData = {
 		name: "About",
 		href: "link in code here for a new page to laod",
 	},
+		option6: {
+		name: "Garcia Escalanzo",
+		href: "One hell of a dude.",
+	},
 };
+
+module.exports = {
+	navbarData,
+}
