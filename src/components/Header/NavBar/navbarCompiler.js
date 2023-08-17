@@ -18,6 +18,4 @@ const navbarCompiler = data => {
 	return navbarContainer;
 };
 
-export default function NavBar() {
-	return navbarCompiler(navbarData);
-};
+export default navbarCompiler(navbarData);
