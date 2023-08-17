@@ -7,8 +7,8 @@ import ContactInfo from './ContactInfo/ContactInfo.js';
 export default function Header() {
 	const headerContainer = document.createElement('header');
 		headerContainer.classList.add('header-container', 'main-page-layout');
-		headerContainer.appendChild(HeaderLogo());
-		headerContainer.appendChild(ContactInfo());
+		headerContainer.appendChild(HeaderLogo);
+		headerContainer.appendChild(ContactInfo);
 		headerContainer.appendChild(navbarCompiler);
 
 	return headerContainer;

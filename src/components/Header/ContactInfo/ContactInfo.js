@@ -2,7 +2,7 @@ import "./style.css";
 const emailTo = "daniel@arborcrafttreeservice.com";
 const companyPhone = "(303) 847-5786";
 
-export default function ContactInfo() {
+const ContactInfo = () => {
 	const locale = document.createElement('div');
 		locale.classList.add('locale');
 		locale.innerHTML = "Golden, CO";
@@ -25,4 +25,6 @@ export default function ContactInfo() {
 		contactInfo.appendChild(locale);
 
 	return contactInfo;
-}
+};
+
+export default ContactInfo();

@@ -1,7 +1,7 @@
 import "./style.css";
 import Logo from '../../../assets/ArborCraft_extended.png';
 
-export default function HeaderLogo () {
+const HeaderLogo = () => {
 	const companyLogo = new Image();
 		companyLogo.src = Logo;
 		companyLogo.classList.add('company-logo');
@@ -9,3 +9,5 @@ export default function HeaderLogo () {
 
 	return companyLogo;
 };
+
+export default HeaderLogo();
