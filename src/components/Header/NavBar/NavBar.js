@@ -10,6 +10,7 @@ const navbarCompiler = data => {
 			card.classList.add('navbar-option');
 			card.id = num;
 			card.innerHTML = i.name;
+			
 		return card;
 	});
 
