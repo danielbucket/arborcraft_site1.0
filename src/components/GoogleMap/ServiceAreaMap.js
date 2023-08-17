@@ -22,6 +22,7 @@ export default function ServiceAreaMap() {
       zoom: 9.75,
       center: mapCenter,
       mapId: "GOLDEN_CO_MAP",
+      disableDefaultUI: true,
     });
 
     const serviceArea = new google.maps.Polyline({
