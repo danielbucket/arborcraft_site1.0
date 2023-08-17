@@ -1,5 +1,5 @@
 import './style.css';
-import NavBar from './NavBar/NavBar.js';
+import navbarCompiler from './Navbar/navbarCompiler.js';
 import navbarData from './navbarData.js';
 import HeaderLogo from './HeaderLogo/HeaderLogo.js';
 import ContactInfo from './ContactInfo/ContactInfo.js';
@@ -9,7 +9,7 @@ export default function Header() {
 		headerContainer.classList.add('header-container', 'main-page-layout');
 		headerContainer.appendChild(HeaderLogo());
 		headerContainer.appendChild(ContactInfo());
-		headerContainer.appendChild(NavBar());
+		headerContainer.appendChild(navbarCompiler);
 
 	return headerContainer;
 };
