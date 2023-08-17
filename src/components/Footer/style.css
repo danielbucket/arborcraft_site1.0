@@ -1,13 +1,16 @@
 .footer-container {
 	grid-area: 3;
+	height: 6em;
+}
 
+.logo-container {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
+	justify-items: center;
 }
 
 .logo-image {
 	display: flex;
-	margin: auto;
 	justify-content: center;
 	height: 6em;
 
