@@ -1,14 +1,8 @@
 .header-container {
 	display: grid;
-	grid-template-columns:	[logo] 70fr
-													[contact] 30fr
-													[column-end];
+	grid-area: header;
 
-	grid-template-rows: 		[logo-contact] 14em
-													[nav-bar] 4em
-													[row-end];
-
-	background-color: blanchedalmond;
-	position: fixed;
-	top: 0;
+	grid-template-rows: 		[contact] 4em
+													[logo] 6em;
+  grid-template-columns: 	9fr 1fr;
 }

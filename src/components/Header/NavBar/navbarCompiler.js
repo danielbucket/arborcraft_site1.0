@@ -1,5 +1,7 @@
-import "./style.css";
+
+import "./navbarDropMenu.css";
 import navbarData from '../navbarData.js';
+const menuIcon = require('../../../assets/icons/menu-boxed.svg');
 
 const navbarCompiler = data => {
 	const navbarContainer = document.createElement('div');
@@ -18,4 +20,21 @@ const navbarCompiler = data => {
 	return navbarContainer;
 };
 
-export default navbarCompiler(navbarData);
+
+const navbarDropMenu = data => {
+	const iconContainer = document.createElement('div');
+				iconContainer.classList.add('drop-menu-container');
+
+	const icon = new Image();
+				icon.src = menuIcon;
+				icon.classList.add('drop-menu-icon');
+
+				console.log(menuIcon)
+
+	iconContainer.appendChild(icon);
+	return iconContainer;
+};
+
+
+
+export default navbarDropMenu(navbarData);

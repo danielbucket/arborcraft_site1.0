@@ -66,9 +66,10 @@ body {
 .AppContainer {
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: 18em calc(100vh - 26.75em) 8em;
+	grid-template-rows: [header] 10em 
+											[main] calc(100vh - 26.75em)
+											[footer] 8em;
 }
 
 .main-page-layout {
-	width: 100vw;
 }

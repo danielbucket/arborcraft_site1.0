@@ -1,0 +1,11 @@
+.drop-menu-container {
+	grid-column: 2;
+	display: flex;
+	place-items: center;
+	padding-right: .5em;
+}
+
+.drop-menu-icon {
+	height: 5em;
+	padding-top: 0.5em;
+}

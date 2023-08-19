@@ -22,7 +22,7 @@ module.exports = {
   		title: 'ArboCraft Tree',
   	}),
     new FaviconsWebpackPlugin({
-      logo: './src/assets/ArborCraft_circle.png',
+      logo: './src/assets/logos/tree_logo.png',
   }),
     new webpack.DefinePlugin({
       "process.env": dotenv.parsed

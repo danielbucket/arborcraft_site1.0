@@ -1,5 +1,5 @@
 .footer-container {
-	grid-area: 3;
+	grid-area: footer;
 	height: 6em;
 }
 

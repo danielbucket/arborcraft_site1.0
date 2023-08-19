@@ -1,44 +1,36 @@
-.contact-info-container {
-	display: grid;
-	grid-column: contact;
-	grid-row: logo-contact;
-	justify-items: center;
+.contact-info-container {	
+	grid-column: 1 / span 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-	grid-template-rows: repeat(7, 1fr);
-	grid-template-columns: repeat(2, 1fr);
-
-	margin: auto 0;
-	height: 100%;
-	padding: .5em;
 }
 
-.locale {
-	display: grid;
-	grid-row-start: 1;
-	grid-row-end: 5;
-	grid-column: 1 / span 2;
+.phone-number-container {
+	display: flex;
+	align-items: center;
 	justify-content: center;
+	height: 4em;
 	width: 100%;
-	align-content: center;
+	background-color: var(--ac-green-opaque);
+}
 
-	padding-top: .45em;
-	font-family: IMFell-reg;
-	color: var(--ac-brown);
-	font-size: 5em;
+.phone-icon {
+	margin-right: .5em;
 }
 
 .phone-number {
-	display: grid;
-	grid-column: 1;
-	grid-row-start: 5;
-	grid-row-end: 7;
-	align-content: center;
-
 	font-family: IMFell-ital;
-	font-size: 3em;
+	font-size: 2.5em;
 	font-weight: 600;
 	color: var(--ac-brown);
 	text-decoration: none;
+}
+
+.locale {
+	font-family: IMFell-reg;
+	color: var(--ac-brown);
+	font-size: 3em;
 }
 
 .email {
@@ -52,4 +44,13 @@
 	font-size: 3em;
 	color: var(--ac-brown);
 	text-decoration: none;
+}
+
+@media (width <= 400px) {
+	.locale {
+		display: none;
+	}
+	.email {
+		display: none;
+	}
 }
