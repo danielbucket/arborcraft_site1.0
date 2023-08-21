@@ -1,5 +1,6 @@
 .drop-menu-container {
 	grid-column: 2;
+	grid-row: logo;
 	display: flex;
 	place-items: center;
 	padding-right: .5em;

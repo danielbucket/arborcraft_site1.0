@@ -20,21 +20,16 @@ const navbarCompiler = data => {
 	return navbarContainer;
 };
 
-
 const navbarDropMenu = data => {
 	const iconContainer = document.createElement('div');
-				iconContainer.classList.add('drop-menu-container');
+		iconContainer.classList.add('drop-menu-container');
 
 	const icon = new Image();
-				icon.src = menuIcon;
-				icon.classList.add('drop-menu-icon');
-
-				console.log(menuIcon)
+		icon.src = menuIcon;
+		icon.classList.add('drop-menu-icon');
 
 	iconContainer.appendChild(icon);
 	return iconContainer;
 };
-
-
 
 export default navbarDropMenu(navbarData);

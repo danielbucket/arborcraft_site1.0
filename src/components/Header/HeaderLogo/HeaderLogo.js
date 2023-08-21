@@ -4,30 +4,25 @@ import Logo_WO_Tree	from '../../../assets/logos/arborcraft.png';
 import arbor_text 	from '../../../assets/logos/arbor_text.png';
 import craft_text 	from '../../../assets/logos/craft_text.png';
 
-const HeaderLogo = () => {
+const HeaderLogo = screenWidth => {
+	let logo;
 	const logoContainer = document.createElement('div');
-				logoContainer.classList.add('header-logo-container');
+		logoContainer.classList.add('header-logo-container');
 
 
   const headerLogo = new Image();
-			  // headerLogo.src = Logo_W_Tree;
-			  headerLogo.src = Logo_WO_Tree;
-			  headerLogo.classList.add('temp-header-logo');
+	  headerLogo.classList.add('header-logo');
 
-
-	// const arbor = new Image();
-	// 			arbor.classList.add('arbor-text', 'logo-text');
-	// 			arbor.src = arbor_text;
-	// const craft = new Image();
-	// 			craft.classList.add('craft-text', 'logo-text');
-	// 			craft.src = craft_text;
-
-	// logoContainer.appendChild(arbor);
-	// logoContainer.appendChild(craft);
+  	if (screenWidth <= 400) {
+  		logo = Logo_WO_Tree
+  	} else if (screenWidth > 400) {
+  		logo = Logo_W_Tree;
+  	};
+	  headerLogo.src = logo;
 
 
   logoContainer.appendChild(headerLogo)
 	return logoContainer;
 };
 
-export default HeaderLogo();
+export default HeaderLogo;
