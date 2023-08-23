@@ -1,0 +1,147 @@
+.header-container {
+	display: grid;
+	grid-area: header;
+
+  grid-template-columns: 	repeat(12, 1fr);
+	grid-template-rows: 		[mobile_phone] 4fr
+													[mobile_logo_dropMenu] 6fr;
+}
+
+/* --> PHONE <-- */
+.phone-number-container {
+	grid-row: mobile_phone;
+	grid-column: 1 / end;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 4em;
+	width: 100%;
+	background-color: var(--ac-green-opaque);
+}
+
+.phone-number {
+	font-family: IMFell-ital;
+	font-size: 2.5em;
+	font-weight: 600;
+	color: var(--ac-brown);
+	text-decoration: none;
+}
+
+.phone-icon {
+	margin-right: .5em;
+}
+
+/* --> LOGO <-- */
+.header-logo-container {
+	display: grid;
+	grid-column: 1 / span 10;
+	grid-row: mobile_logo_dropMenu;
+
+	border: 1px solid red;
+}
+
+.header-logo {
+	background-image: var(--logo-wo-tree);
+	background-size: contain;
+	background-position: center;
+}
+
+/* -->  LOCALE <-- */
+.locale {
+	font-family: IMFell-reg;
+	color: var(--ac-brown);
+	font-size: 3em;
+}
+
+/* --> EMAIL <-- */
+.email {
+	display: grid;
+	grid-row-start: 5;
+	grid-row-end: 7;
+	grid-column: 2;
+	align-content: center;
+
+	font-family: IMFell-reg;
+	font-size: 3em;
+	color: var(--ac-brown);
+	text-decoration: none;
+}
+
+/* --> NAVBAR / DROP-MENU <-- */
+.drop-menu-container {
+	grid-column: 11 / end;
+	grid-row: mobile_logo_dropMenu;
+}
+
+.drop-menu-icon {
+	display: flex;
+	height: 90%;
+	margin: auto;
+}
+
+.navbar-container {
+	grid-row: nav-bar;
+	grid-column-start: logo;
+	grid-column-end: column-end;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	background-color: var(--ac-brown);
+	width: 100%;
+}
+
+.navbar-option {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+
+	font-family: RobotoFlex;
+	letter-spacing: .1em;
+	font-size: 1.4em;
+	font-weight: 500;
+	color: var(--ac-green);
+	box-shadow: 0 0 var(--ac-green);
+	border-radius: .12em;
+	padding: 0.01em 0.01em;
+
+	transition:
+		padding .75s,
+		box-shadow .5s,
+		font-size 1s,
+		width .5s,
+		margin-top .5s,
+		font-weight .5s;
+}
+
+.navbar-option:hover {
+	font-size: 2em;
+	font-weight: 725;
+	padding: 0.01em 0.18em;
+	margin-top: auto;
+	cursor: pointer;
+	box-shadow: 0 0 0.1em 0.18em var(--ac-green-opaque);
+
+}
+
+
+/* --> MEDIA QUERIES <-- */
+@media (width <= 400px) {
+	.locale {
+		display: none;
+	}
+	.email {
+		display: none;
+	}
+
+	.header-logo {
+		background-image: var(--logo-with-tree);
+	}
+}
+
+@media (width > 600) {
+	.header-container {
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(9, 1fr);
+	}
+}

@@ -1,4 +1,4 @@
-import './style.css';
+import './main.style.css';
 import MapContainer from '../GoogleMap/MapContainer.js';
 
 export default function Main() {

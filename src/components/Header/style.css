@@ -1,8 +1,0 @@
-.header-container {
-	display: grid;
-	grid-area: header;
-
-	grid-template-rows: 		[contact] 4em
-													[logo] 6em;
-  grid-template-columns: 	9fr 1fr;
-}

@@ -1,0 +1,24 @@
+.footer-container {
+	grid-area: footer;
+	height: 6em;
+}
+
+.logo-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	justify-items: center;
+}
+
+.logo-image {
+	display: flex;
+	justify-content: center;
+	height: 6em;
+
+	transition:
+		height .5s;
+}
+
+.logo-image:hover {
+	cursor: pointer;
+	height: 8em;
+}

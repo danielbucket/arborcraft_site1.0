@@ -1,20 +1,17 @@
-import "./style.css";
 const emailTo = "daniel@arborcrafttreeservice.com";
 const companyPhone = "(303) 847-5786";
+const phoneHREF = "tel:+13038475786";
 const phoneImage = require('../../../assets/images/phone.svg');
 
-const ContactInfo = () => {
-	const contactInfo = document.createElement('address');
-		contactInfo.classList.add('contact-info-container');
-
+const contactInfo = () => {
 	const phoneIcon = new Image();
 		phoneIcon.src = phoneImage;
 		phoneIcon.classList.add('phone-icon');
 
 	const phoneNumber = document.createElement('a');
 		phoneNumber.classList.add('phone-number');
-		phoneNumber.innerHTML = companyPhone;
-		phoneNumber.href = "tel:+13038475786";
+		phoneNumber.innerText = companyPhone;
+		phoneNumber.href = phoneHREF;
 
 	const phone = document.createElement('div');
 		phone.classList.add('phone-number-container');
@@ -38,4 +35,4 @@ const ContactInfo = () => {
 	};
 };
 
-export default ContactInfo();
+export default contactInfo();

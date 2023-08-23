@@ -1,26 +1,19 @@
-import './style.css';
-import navbarCompiler from './Navbar/navbarCompiler.js';
-import navbarDropMenu from './Navbar/navbarCompiler.js';
+import './header.style.css';
+import headerLogo from './headerLogo/headerLogo.js';
+import contactInfo from './contactInfo/contactInfo.js';
+import navbarMenu from './navbar/navbarMenu.js';
 import navbarData from './navbarData.js';
-import HeaderLogo from './HeaderLogo/HeaderLogo.js';
-import ContactInfo from './ContactInfo/ContactInfo.js';
 
-export default function Header(screenWidth) {
-	const { phone, email, locale, contactInfo } = ContactInfo;
-	const logo = HeaderLogo(screenWidth);
+export default function Header() {
+	const { phone, email, locale } = contactInfo;
 
 	const headerContainer = document.createElement('header');
 		headerContainer.classList.add('header-container', 'main-page-layout');
-		headerContainer.appendChild(logo);
-
-		if (screenWidth <= 400) {
-			headerContainer.appendChild(phone);
-			headerContainer.appendChild(navbarDropMenu);
-		} else if (screenWidth > 400) {
-			headerContainer.appendChild(navbarCompiler);
-		};
-
-
+		headerContainer.appendChild(headerLogo);
+		headerContainer.appendChild(phone);
+		headerContainer.appendChild(email);
+		headerContainer.appendChild(locale);
+		headerContainer.appendChild(navbarMenu);
 
 	return headerContainer;
 };
