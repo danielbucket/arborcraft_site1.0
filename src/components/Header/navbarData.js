@@ -8,7 +8,7 @@ const navbarData = [
 		href: "link in code here for a new page to laod",
 	},
 	{
-		name: "Knowledge Area",
+		name: "Resources",
 		href: "link in code here for a new page to laod",
 	},
 	{

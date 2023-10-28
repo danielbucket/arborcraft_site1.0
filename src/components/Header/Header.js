@@ -8,9 +8,9 @@ export default function Header() {
 	const { phone, email, locale } = contactInfo;
 
 	const headerContainer = document.createElement('header');
-		headerContainer.classList.add('header-container', 'main-page-layout');
-		headerContainer.appendChild(headerLogo);
+		headerContainer.classList.add('header-container');
 		headerContainer.appendChild(phone);
+		headerContainer.appendChild(headerLogo);
 		headerContainer.appendChild(email);
 		headerContainer.appendChild(locale);
 		headerContainer.appendChild(navbarMenu);

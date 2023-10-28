@@ -68,9 +68,10 @@ body {
 .AppContainer {
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: [header] 10em 
+/*	in the following calc() atrribute, what does 26.75em referrence?	*/
+	grid-template-rows: [header] 10em
 											[main] calc(100vh - 26.75em)
-											[footer] 8em;
+											[footer] 13em;
 }
 
 .main-page-layout {

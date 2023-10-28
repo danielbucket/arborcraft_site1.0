@@ -2,7 +2,7 @@
 	grid-area: main;
 	
 	display: flex;
-	margin-top: 18em;
+	margin-top: auto;
 	border-top: 1px solid black;
 }
 
