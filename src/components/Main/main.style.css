@@ -1,9 +1,8 @@
 .main-container {
 	grid-area: main;
-	
 	display: flex;
-	margin-top: auto;
-	border-top: 1px solid black;
+	height: 100%;
+	margin-top: 3em;
 }
 
 .service-area-component {
@@ -11,6 +10,7 @@
 	flex-direction: column;
 
 	height: 40em;
+	margin: 0 .25em;
 }
 
 .service-area-header, .service-area-paragraph {
@@ -19,11 +19,9 @@
 }
 
 .service-area-header {
-	font-size: 3em;
-
+	font-size: 2em;
 }
 
 .service-area-paragraph {
 	font-size: 2em;
-
 }

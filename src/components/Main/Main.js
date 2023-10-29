@@ -17,7 +17,7 @@ export default function Main() {
 		areaParagraph.innerHTML = "...as you can see here, on this neat-o map.";
 
 	ServiceAreaComponent.appendChild(areaHeader);
-	ServiceAreaComponent.appendChild(areaParagraph);
+	// ServiceAreaComponent.appendChild(areaParagraph);
 	ServiceAreaComponent.appendChild(MapContainer());
 	Main.appendChild(ServiceAreaComponent);
 	return Main;

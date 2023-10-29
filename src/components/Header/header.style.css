@@ -3,7 +3,7 @@
 	grid-area: header;
 
   grid-template-columns: 	4fr 1fr;
-	grid-template-rows: 		5em 8em;
+	grid-template-rows: 		8em 5em;
 }
 
 /* --> PHONE <-- */
@@ -20,14 +20,14 @@
 
 .phone-number {
 	font-family: IMFell-ital;
-	font-size: 2.5em;
+	font-size: 4em;
 	font-weight: 600;
 	color: var(--ac-brown);
 	text-decoration: none;
 }
 
 .phone-icon {
-	margin-right: .5em;
+	width: 5em;
 }
 
 /* --> LOGO <-- */
@@ -40,10 +40,12 @@
 }
 
 .header-logo {
-	background-image: var(--logo-wo-tree);
+/*	background-image: var(--logo-wo-tree);*/
 	background-size: contain;
 	background-position: center;
-	height: 8em;
+	height: 5em;
+	width: calc(100vw - 5em);
+	margin: 0 0.25em 0 0.25em;
 }
 
 /* -->  LOCALE <-- */
@@ -73,7 +75,7 @@
 	grid-row: 2;
 	display: flex;
 	margin: auto;
-	height: 90%;
+	width: 100%;
 }
 
 .drop-menu-icon {
@@ -129,7 +131,7 @@
 /* --> MEDIA QUERIES <-- */
 @media (width <= 400px) {
 	.header-logo {
-		background-image: var(--logo-with-tree);
+/*		background-image: var(--logo-with-tree);*/
 	}
 }
 

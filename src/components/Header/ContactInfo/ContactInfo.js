@@ -15,8 +15,8 @@ const contactInfo = () => {
 
 	const phone = document.createElement('div');
 		phone.classList.add('phone-number-container');
-		phone.appendChild(phoneIcon);
 		phone.appendChild(phoneNumber);
+		// phone.appendChild(phoneIcon);
 
 	const email = document.createElement('a');
 		email.classList.add('email');

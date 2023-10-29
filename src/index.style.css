@@ -68,10 +68,12 @@ body {
 .AppContainer {
 	min-height: 100vh;
 	display: grid;
-/*	in the following calc() atrribute, what does 26.75em referrence?	*/
-	grid-template-rows: [header] 10em
-											[main] calc(100vh - 26.75em)
-											[footer] 13em;
+/* In the following calc() atrribute, */
+/* 23em is the sum of the header and footer height */
+	grid-template-rows: [header] 13em
+/*											[main] auto*/
+											[main] calc(100vh - 23em)
+											[footer] 10em;
 }
 
 .main-page-layout {
