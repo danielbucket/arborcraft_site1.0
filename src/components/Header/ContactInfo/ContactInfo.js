@@ -20,18 +20,13 @@ const contactInfo = () => {
 
 	const email = document.createElement('a');
 		email.classList.add('email');
-		email.innerHTML = "Email Us!";
+		email.innerHTML = "Click here to Request a Quote!";
 		email.href = `mailto:${emailTo}`;
-
-	const locale = document.createElement('div');
-		locale.classList.add('locale');
-		locale.innerHTML = "Golden, CO";
 
 	return {
 		phone,
 		email,
-		locale,
-		contactInfo
+		contactInfo,
 	};
 };
 

@@ -69,10 +69,9 @@ body {
 	min-height: 100vh;
 	display: grid;
 /* In the following calc() atrribute, */
-/* 23em is the sum of the header and footer height */
-	grid-template-rows: [header] 13em
-/*											[main] auto*/
-											[main] calc(100vh - 23em)
+/* 25.25em is the sum of the header and footer height */
+	grid-template-rows: [header] 18em
+											[main] calc(100vh - 25.25em)
 											[footer] 10em;
 }
 
