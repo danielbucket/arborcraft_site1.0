@@ -1,15 +1,15 @@
-import './style.css';
-import navbarCompiler from './Navbar/navbarCompiler.js';
-import navbarData from './navbarData.js';
-import HeaderLogo from './HeaderLogo/HeaderLogo.js';
-import ContactInfo from './ContactInfo/ContactInfo.js';
+import './header.style.css';
+import headerLogo from './headerLogo/headerLogo.js';
+import contactInfo from './contactInfo/contactInfo.js';
 
 export default function Header() {
+	const { phone, email } = contactInfo;
+
 	const headerContainer = document.createElement('header');
-		headerContainer.classList.add('header-container', 'main-page-layout');
-		headerContainer.appendChild(HeaderLogo);
-		headerContainer.appendChild(ContactInfo);
-		headerContainer.appendChild(navbarCompiler);
+		headerContainer.classList.add('header-container');
+		headerContainer.appendChild(phone);
+		headerContainer.appendChild(headerLogo);
+		headerContainer.appendChild(email);
 
 	return headerContainer;
 };

@@ -1,13 +1,13 @@
 import { Loader } from '@googlemaps/js-api-loader';
 const { GMAPS_KEY } = require('../../../gMapsKey.js');
-const mapIcon = require("../../assets/ArborCraft_circle.png");
+const mapIcon = require("../../assets/logos/tree_logo.png");
 import { mapCenter, goldenCoordinates, mapAreaCoordinates } from './mapCoordinates.js';
 
 export default function ServiceAreaMap() {
   const markerIcon = document.createElement('img');
     markerIcon.src = mapIcon;
-    markerIcon.style.height = "5em";
-    markerIcon.style.width = "5em";
+    markerIcon.style.height = "3em";
+    markerIcon.style.width = "3em";
 
   const loader = new Loader({
     apiKey: GMAPS_KEY,
@@ -19,7 +19,7 @@ export default function ServiceAreaMap() {
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
     const map = new Map(document.getElementById("service_map"), {
-      zoom: 9.75,
+      zoom: 9.5,
       center: mapCenter,
       mapId: "GOLDEN_CO_MAP",
       disableDefaultUI: true,

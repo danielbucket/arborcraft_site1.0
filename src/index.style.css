@@ -32,6 +32,8 @@
 	--ac-brown: 				#594A42;
 
 	--elm-climb:				url('./assets/images/elmClimb.jpg');
+	--logo-wo-tree:			url('./assets/logos/arborcraft.png');
+	--logo-with-tree:		url('./assets/logos/ArborCraft_extended.png');
 }
 
 * {
@@ -66,9 +68,12 @@ body {
 .AppContainer {
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: 18em calc(100vh - 26.75em) 8em;
+/* In the following calc() atrribute, */
+/* 25.25em is the sum of the header and footer height */
+	grid-template-rows: [header] 18em
+											[main] calc(100vh - 25.25em)
+											[footer] 10em;
 }
 
 .main-page-layout {
-	width: 100vw;
 }

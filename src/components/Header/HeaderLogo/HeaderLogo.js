@@ -1,13 +1,17 @@
-import "./style.css";
-import Logo from '../../../assets/ArborCraft_extended.png';
+import "./headerLogo.style.css";
+const icon_noTree = require('../../../assets/logos/arborcraft.png');
+const icon_wTree = require('../../../assets/logos/ArborCraft_extended.png');
 
-const HeaderLogo = () => {
-	const companyLogo = new Image();
-		companyLogo.src = Logo;
-		companyLogo.classList.add('company-logo');
-		companyLogo.setAttribute("alt", "Arborcraft Logo");
+const headerLogo = () => {
+  const logo = new Image();
+	  logo.classList.add('header-logo');
+	  logo.src = icon_noTree;
 
-	return companyLogo;
+	const logoContainer = document.createElement('div');
+		logoContainer.classList.add('header-logo-container');
+	  logoContainer.appendChild(logo);
+
+	return logoContainer;
 };
 
-export default HeaderLogo();
+export default headerLogo();

@@ -1,4 +1,4 @@
-.navbar-container {
+/*.navbar-container {
 	grid-row: nav-bar;
 	grid-column-start: logo;
 	grid-column-end: column-end;
@@ -40,4 +40,4 @@
 	cursor: pointer;
 	box-shadow: 0 0 0.1em 0.18em var(--ac-green-opaque);
 
-}
+}*/
