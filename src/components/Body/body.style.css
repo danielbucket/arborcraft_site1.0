@@ -29,7 +29,6 @@
 	right: 0;
 }
 
-
 .slide-card-container {
 	grid-template-rows: 3em 10em;
 	scroll-snap-align: center;
@@ -57,7 +56,7 @@
 
 .slide-card-body {
 	grid-row: 2;
-	margin: .05em .15em .05em .15em;
+	margin: 1.5em .15em .05em .15em;
 	height: 25em;
 	display: flex;
 	flex-direction: column;
@@ -65,6 +64,10 @@
 	font-family: inherit;
 	font-size: 1.5em;
 	color: var(--ac-brown);
+}
+
+.body-header {
+
 }
 
 .box-shadow:hover {

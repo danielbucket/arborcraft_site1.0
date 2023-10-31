@@ -3,7 +3,7 @@ import MapContainer from '../GoogleMap/MapContainer';
 const aboutUsBody = () => {
 	const container = document.createElement('div');
 		container.classList.add('about-us-body', 'slide-card-body');
-		container.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. Our staff is comprised of educated and experienced individuals who know the importance of safety for themselves as tree workers as well as the safety of you and your property. We base our reputation on doing the job right the first time.";
+		container.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. Our staff is comprised of educated and experienced individuals who know the importance of safety for themselves as tree workers as well as the safety for you and your property. \<br>We base our reputation on doing the job right the first time.";
 	return container;
 };
 
