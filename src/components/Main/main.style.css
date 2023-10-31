@@ -1,92 +1,44 @@
 .main-container {
 	display: grid;
 	grid-area: main;
-	/* using view width (vw) in gtc() breaks the website */
-	grid-template-columns: repeat(3, 100%);
+}
 
+.slide-container {
+	display: grid;
+	/* using view width (vw) in gtc() breaks the website */
+	grid-template-columns: repeat(6, 100%);
 	overflow-y: scroll;
 	scroll-snap-type: x mandatory;
 }
 
-
-#slide-container {
-	grid-template-rows: 8em auto;
+.slide-card-container {
+	grid-template-rows: 3em 10em;
 	scroll-snap-align: center;
+	scroll-snap-stop: always;
 	text-align: center;
 }
 
-.slide-header {
+.slide-card-header {
 	grid-row: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
-	font-size: 2.25rem;
+	height: 3em;
+	font-size: 2.5rem;
 	border-top: .15rem solid var(--ac-orange);
 	border-bottom: .15rem solid var(--ac-orange);
 }
 
-.slide-body {
+.slide-card-body {
 	grid-row: 2;
-
+	margin: .15em .15em;
+	height: 25em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	font-size: 1.75em;
-}
-
-/* service area */
-.service-area-container {
-	display: grid;
-	grid-column: 1;
-}
-
-.service-area-header {
-}
-
-/*there's a better way to target the 1st <p> tag*/
-/*to apply the increased font-size. What is it?*/
-
-#sas1 {
-/*	font-size: 2.25rem;*/
-}
-
-.service-area-body {
 	font-family: IMFell-reg;
 	color: var(--ac-brown);
-}
-
-.map-container {
-/*	min-height: 40rem;*/
-	border: .125em solid black;
-	margin: .25em;
-}
-
-/* about us */
-.about-us-container {
-	display: grid;
-	grid-column: 2;
-}
-
-.about-us-header {
-
-}
-
-.about-us-body {
-
-}
-
-/* services */
-.services-container {
-	display: grid;
-	grid-column: 3;
-}
-
-.services-header {
-
-}
-
-.services-body {
-
 }
