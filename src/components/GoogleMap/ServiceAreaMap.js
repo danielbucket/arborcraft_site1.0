@@ -19,7 +19,7 @@ export default function ServiceAreaMap() {
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
     const map = new Map(document.getElementById("service_map"), {
-      zoom: 9.5,
+      zoom: 10,
       center: mapCenter,
       mapId: "GOLDEN_CO_MAP",
       disableDefaultUI: true,
