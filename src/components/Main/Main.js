@@ -13,7 +13,7 @@ export default function Main() {
 
 		const serviceAreaHeader = document.createElement('div');
 			serviceAreaHeader.classList.add('service-area-header', 'slide-header');
-			serviceAreaHeader.innerHTML = "Serving Golden, CO,\<br>& Denver's Western 'Burbs";
+			serviceAreaHeader.innerHTML = "Serving Golden, Colorado, \<br>and Denver's western 'burbs. \<br> Since 2020";
 
 		const serviceAreaBody = MapContainer();
 
