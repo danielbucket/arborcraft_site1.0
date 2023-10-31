@@ -1,6 +1,7 @@
 .map-container {
-	min-height: 5rem;
-	min-width: 39.5rem;
-	border: .125em solid black;
+	min-height: 100%;
+	min-width: 100%;
+	border: .125em solid var(--ac-brown);
+	border-radius: .25em;
 	margin: .25em;
 }

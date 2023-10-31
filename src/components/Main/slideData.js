@@ -8,27 +8,27 @@ const slideData = [
 	},
 	{
 		slideName: "about-us",
-		header: "About Us Header",
+		header: "About Us",
 		body: "About Us Body",
 	},
 	{
 		slideName: "services",
-		header: "Services Header",
+		header: "Services",
 		body: "Services Body",
 	},
 	{
 		slideName: "reviews",
-		header: "Reviews Header",
+		header: "Reviews",
 		body: "Reviews Body",
 	},
 	{
 		slideName: "portfolio",
-		header: "Portfolio Header",
+		header: "Portfolio",
 		body: "Portfolio Body",
 	},
 	{
 		slideName: "resources",
-		header: "Resources Header",
+		header: "Resources",
 		body: "Resources Body",
 	}
 ];

@@ -9,13 +9,12 @@
 	grid-template-columns: repeat(6, 100%);
 	overflow-y: scroll;
 	scroll-snap-type: x mandatory;
-
 }
 
 .slide-card-container {
-
 	grid-template-rows: 3em 10em;
 	scroll-snap-align: center;
+	scroll-snap-stop: always;
 	text-align: center;
 }
 
@@ -35,7 +34,6 @@
 .slide-card-body {
 	grid-row: 2;
 	margin: .15em .15em;
-
 	height: 25em;
 	display: flex;
 	flex-direction: column;
@@ -43,13 +41,4 @@
 	font-size: 1.75em;
 	font-family: IMFell-reg;
 	color: var(--ac-brown);
-
-}
-
-.map-container {
-	min-height: 100%;
-	min-width: 100%;
-	border: .125em solid var(--ac-brown);
-	border-radius: .25em;
-	margin: .25em;
 }

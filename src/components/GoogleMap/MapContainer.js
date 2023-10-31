@@ -1,4 +1,5 @@
 import ServiceAreaMap from './ServiceAreaMap.js';
+import './MapContainer.style.css';
 
 export default function MapContainer() {
 	const container = document.createElement('div');
