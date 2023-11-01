@@ -1,0 +1,54 @@
+.popup-container {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background-color: #aac27ee8;
+	font-family: RobotoFlex;
+}
+
+.close-button {
+	height: 5rem;
+	width: 5rem;
+
+	position: absolute;
+	top: .75em;
+	right: .5em;
+}
+
+.display-toggle-none {
+	display: none;
+}
+
+.popup-header {
+	text-align: center;
+	margin-top: 7rem;
+	font-size: 4em;
+}
+
+.popup-body {
+	margin-top: 2em;
+	text-align: center;
+	font-size: 2.75em;
+}
+
+.github-link-container {
+	margin-top: 5em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	height: 5em;
+	width: 100%;
+	border: .25em solid red;
+}
+
+.github-text {
+	font-size: 3rem;
+	margin: auto 0;
+}
+
+.github-icon {
+	width: 5em;
+}
