@@ -52,14 +52,18 @@ const githubLink = () => {
 
 
 export default function UnderConstructionPopup() {
+	const positioningContainer = document.createElement('div');
+		positioningContainer.classList.add('positioning-container');
+		positioningContainer.id = "container_display_toggle";
+
 	const container = document.createElement('div');
 		container.classList.add('popup-container');
-		container.id = "container_display_toggle";
 
 	container.appendChild(closePopUpButton());
 	container.appendChild(popupHeader());
 	container.appendChild(popupBody());
 	container.appendChild(githubLink());
+	positioningContainer.appendChild(container);
 
-	return container;
+	return positioningContainer;
 };
