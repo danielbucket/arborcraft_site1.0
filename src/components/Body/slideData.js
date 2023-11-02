@@ -10,7 +10,7 @@ const aboutUsBody = () => {
 const servicesBody = () => {
 	const container = document.createElement('div');
 		container.classList.add('services-body', 'slide-card-body');
-		container.innerHTML = "Tree Pruning, \<br>Trimming, \<br>Removals, \<br>PPlanting, \<br> Nutrition and Care";
+		container.innerHTML = "Tree Pruning, \<br>Trimming, \<br>Removals, \<br>Planting, \<br> Nutrition and Care";
 	return container;
 };
 
