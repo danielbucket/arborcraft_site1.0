@@ -1,5 +1,6 @@
 import { Loader } from '@googlemaps/js-api-loader';
-const { GMAPS_KEY } = require('../../../gMapsKey.js');
+const KEY = process.env.DEVELOPMENT_GMAPS_KEY;
+
 const mapIcon = require("../../assets/logos/tree_logo.png");
 import { mapCenter, goldenCoordinates, mapAreaCoordinates } from './mapCoordinates.js';
 
@@ -10,7 +11,7 @@ export default function ServiceAreaMap() {
     markerIcon.style.width = "3em";
 
   const loader = new Loader({
-    apiKey: GMAPS_KEY,
+    apiKey: KEY,
     version: "weekly",
   });
 
