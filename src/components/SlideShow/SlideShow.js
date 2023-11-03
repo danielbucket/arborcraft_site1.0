@@ -29,14 +29,14 @@ const SlideShow = () => {
 	const aboutUsBody = () => {
 		const container = document.createElement('div');
 			container.classList.add('about-us-body', 'slide-card-body');
-			container.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. Our staff is comprised of educated and experienced individuals who know the importance of safety for themselves as tree workers as well as the safety for you and your property. \<br>We base our reputation on doing the job right the first time.";
+			container.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. Our staff is comprised of educated and experienced individuals who know the importance of safety for themselves as tree workers as well as the safety for you and your property. We base our reputation on doing the job right the first time.";
 		return container;
 	};
 
 	const servicesBody = () => {
 		const container = document.createElement('div');
 			container.classList.add('services-body', 'slide-card-body');
-			container.innerHTML = "Tree Pruning, \<br>Trimming, \<br>Removals, \<br>Planting, \<br> Nutrition and Care";
+			container.innerHTML = "Tree Pruning, Trimming, Removals, Planting, Nutrition and Care";
 		return container;
 	};
 
@@ -60,7 +60,6 @@ const SlideShow = () => {
 
 		const reviewCardsArr = data.map((i,num) => {
 			const { review, author } = i;
-
 			const cardContainer = document.createElement('div');
 				cardContainer.classList.add('review-card-container');
 				cardContainer.id = num;
@@ -81,65 +80,66 @@ const SlideShow = () => {
 
 		reviewCardsArr.map(i => reviewsBodyContainer.appendChild(i));
 		return reviewsBodyContainer;
-	}; // end reviewsBody() return single element
-
-
+	};// end reviewsBody() returns a single parent element with childnodes
 
 	const slideData = [
-		{
-			slideName: "service-area",
-			header: "Serving Golden, Colorado, \<br>and Denver's western 'burbs",
-			body: MapContainer(),
-		},
+		// {
+		// 	slideName: "service-area",
+		// 	headerText: "Serving Golden, Colorado, \<br>and Denver's western 'burbs",
+		// 	bodyElement: MapContainer(),
+		// },
 		{
 			slideName: "about-us",
-			header: "About Us",
-			body: aboutUsBody(),
+			headerText: "About Us",
+			bodyElement: aboutUsBody(),
 		},
-		{
-			slideName: "services",
-			header: "Services",
-			body: servicesBody(),
-		},
-		{
-			slideName: "reviews",
-			header: "Reviews",
-			body: reviewsBody(reviewsStubArr),
-		},
-		{
-			slideName: "portfolio",
-			header: "Portfolio",
-			body: portfolioBody(),
-		},
-		{
-			slideName: "resources",
-			header: "Resources",
-			body: resourcesBody(),
-		}
+		// {
+		// 	slideName: "services",
+		// 	headerText: "Services",
+		// 	bodyElement: servicesBody(),
+		// },
+		// {
+		// 	slideName: "reviews",
+		// 	headerText: "Reviews",
+		// 	bodyElement: reviewsBody(reviewsStubArr),
+		// },
+		// {
+		// 	slideName: "portfolio",
+		// 	headerText: "Portfolio",
+		// 	bodyElement: portfolioBody(),
+		// },
+		// {
+		// 	slideName: "resources",
+		// 	headerText: "Resources",
+		// 	bodyElement: resourcesBody(),
+		// }
 	];
 
-	const booty = slideData.map(topic => {
+	const slideshow = slideData.map(topic => {
+		const { slideName, bodyElement, headerText } = topic;
+		// console.log('slideName: ', slideName)
+		// console.log('bodyElement: ', bodyElement)
+		// console.log('headerText: ', headerText)
 		const slidesContainer = document.createElement('div');
-			slidesContainer.classList.add('slides-container', topic.slideName+"-container");
+			slidesContainer.classList.add('slides-container', slideName + "-container");
 
-		const slideTopicHeader = document.createElement('div');
-			slideTopicHeader.classList.add('slide-topic-header');
-			slideTopicHeader.innerHTML = topic.header;
-			slideTopicHeader.appendChild(swipeBtnLeft());
-			slideTopicHeader.appendChild(swipeBtnRight());
+		const topicHeader = document.createElement('div');
+			topicHeader.classList.add('topic-header');
+			topicHeader.innerHTML = headerText;
+			topicHeader.appendChild(swipeBtnLeft());
+			topicHeader.appendChild(swipeBtnRight());
 
-		const slideTopicBody = document.createElement('div');
-			slideTopicBody.classList.add('slide-topic-body');
-			slideTopicBody.innerHTML = topic.body;
+		const topicBody = document.createElement('div');
+			topicBody.classList.add('topic-body');
+			topicBody.innerHTML = bodyElement;
 
-		slidesContainer.appendChild(slideTopicHeader);
-		slidesContainer.appendChild(slideTopicBody);
+		slidesContainer.appendChild(topicHeader);
+		slidesContainer.appendChild(topicBody);
 
 		return slidesContainer;
 	}); // end booty. returns an array of cards
 
-
-	booty.map(i => slideShowContainer.appendChild(i));
+	slideshow.map(i => slideShowContainer.appendChild(i));
 	return slideShowContainer;
 };
 
