@@ -74,7 +74,6 @@ const SlideShow = () => {
 
 			cardContainer.appendChild(reviewText);
 			cardContainer.appendChild(authorText);
-
 			return cardContainer;
 		});
 
@@ -86,40 +85,38 @@ const SlideShow = () => {
 		// {
 		// 	slideName: "service-area",
 		// 	headerText: "Serving Golden, Colorado, \<br>and Denver's western 'burbs",
-		// 	bodyElement: MapContainer(),
+		// 	cardElement: MapContainer(),
 		// },
 		{
 			slideName: "about-us",
 			headerText: "About Us",
-			bodyElement: aboutUsBody(),
+			cardElement: aboutUsBody(),
 		},
-		// {
-		// 	slideName: "services",
-		// 	headerText: "Services",
-		// 	bodyElement: servicesBody(),
-		// },
-		// {
-		// 	slideName: "reviews",
-		// 	headerText: "Reviews",
-		// 	bodyElement: reviewsBody(reviewsStubArr),
-		// },
-		// {
-		// 	slideName: "portfolio",
-		// 	headerText: "Portfolio",
-		// 	bodyElement: portfolioBody(),
-		// },
-		// {
-		// 	slideName: "resources",
-		// 	headerText: "Resources",
-		// 	bodyElement: resourcesBody(),
-		// }
+		{
+			slideName: "services",
+			headerText: "Services",
+			cardElement: servicesBody(),
+		},
+		{
+			slideName: "reviews",
+			headerText: "Reviews",
+			cardElement: reviewsBody(reviewsStubArr),
+		},
+		{
+			slideName: "portfolio",
+			headerText: "Portfolio",
+			cardElement: portfolioBody(),
+		},
+		{
+			slideName: "resources",
+			headerText: "Resources",
+			cardElement: resourcesBody(),
+		}
 	];
 
 	const slideshow = slideData.map(topic => {
-		const { slideName, bodyElement, headerText } = topic;
-		// console.log('slideName: ', slideName)
-		// console.log('bodyElement: ', bodyElement)
-		// console.log('headerText: ', headerText)
+		const { slideName, cardElement, headerText } = topic;
+
 		const slidesContainer = document.createElement('div');
 			slidesContainer.classList.add('slides-container', slideName + "-container");
 
@@ -131,7 +128,7 @@ const SlideShow = () => {
 
 		const topicBody = document.createElement('div');
 			topicBody.classList.add('topic-body');
-			topicBody.innerHTML = bodyElement;
+			topicBody.appendChild(cardElement);
 
 		slidesContainer.appendChild(topicHeader);
 		slidesContainer.appendChild(topicBody);
@@ -140,6 +137,7 @@ const SlideShow = () => {
 	}); // end booty. returns an array of cards
 
 	slideshow.map(i => slideShowContainer.appendChild(i));
+
 	return slideShowContainer;
 };
 
