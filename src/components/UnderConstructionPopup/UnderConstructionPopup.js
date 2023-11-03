@@ -4,7 +4,7 @@ const closeBtnIcon = require('../../assets/icons/close-button.png');
 
 const handleClick = () => {
 	const moduleContainer = document.getElementById('container_display_toggle');
-		moduleContainer.classList.add('display-toggle-none');
+		moduleContainer.setAttribute('style', 'display: none')
 };
 
 const closePopUpButton = () => {
@@ -17,15 +17,39 @@ const closePopUpButton = () => {
 
 const popupHeader = () => {
 	const container = document.createElement('div');
-		container.classList.add('popup-header');
-		container.innerHTML = "Website Under Construction";
+		container.classList.add('popup-header-container');
+
+	const header = document.createElement('h1');
+		header.classList.add('popup-header');
+		header.innerHTML = "This site is under construction";
+
+	const p = document.createElement('p');
+		p.classList.add('popup-header-p');
+		p.innerHTML = "( But it's still functional! )"
+
+	container.appendChild(header);
+	container.appendChild(p);
 	return container;
 };
 
 const popupBody = () => {
 	const container = document.createElement('div');
-		container.classList.add('popup-body');
-		container.innerHTML = "Please forgive the hiccups! \<br>This Website is made by me from scratch, one line of code at a time. \<br>I'll be pushing updates as I continue to refine this project. \<br>Click the link below to check out my GitHub repository.";
+		container.classList.add('popup-body-container');
+
+		const p1 = document.createElement('p');
+			p1.classList.add('popup-body');
+			p1.innerHTML = "Please forgive the hiccups!"
+		const p2 = document.createElement('p');
+			p2.classList.add('popup-body');
+			p2.innerHTML = "This website was made by me from scratch, one line of code at a time. \<br>I'm still making updates."
+		const p3 = document.createElement('p');
+			p3.classList.add('popup-body');
+			p3.innerHTML = "If you're interested, click the link below to check out the source code on GitHub.";
+
+		container.appendChild(p1);
+		container.appendChild(p2);
+		container.appendChild(p3);
+
 	return container;
 }
 
