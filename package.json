@@ -28,6 +28,7 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.2",
     "env": "^0.0.2",
+    "firebase": "^10.5.2",
     "node": "^21.1.0"
   }
 }
