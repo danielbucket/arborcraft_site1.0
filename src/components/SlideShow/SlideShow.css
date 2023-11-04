@@ -9,6 +9,7 @@
 .swipe-button {
 	height: 2.75em;
 	width: 1.5em;
+	background-color: var(--ac-brown);
 }
 
 .left-btn {

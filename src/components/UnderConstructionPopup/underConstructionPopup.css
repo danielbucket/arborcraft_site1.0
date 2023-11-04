@@ -3,7 +3,6 @@
 	top: 0;
 	left: 0;
 	z-index: 99;
-
 	height: 100vh;
 	width: 100vw;
 	background-color: transparent;
@@ -14,19 +13,20 @@
 	display: flex;
 	flex-direction: column;
 	margin: auto;
-
-	height: calc(100vh - .5em);
-	width: calc(100vw - .5em);
+	height: calc(100vh - 1.75em);
+	width: calc(100vw - 2em);
 	background-color: #aac27ee8;
 	font-family: RobotoFlex;
 	border: .25em solid red;
-	box-shadow: 0px 0px 25px red;
+	box-shadow: 0px 0px 25px #ff6800;
 	border-radius: .5em;
 }
 
 .close-button {
 	align-self: flex-end;
-	height: 5rem;
+	height: 6em;
+	margin: 1.5em 1.5em 0 0;
+
 }
 
 .popup-header-container {
@@ -45,7 +45,7 @@
 }
 
 .popup-body {
-	margin-top: 1em;
+	margin: 1em .5em;
 	text-align: center;
 	font-size: 2.75em;
 }
@@ -73,8 +73,15 @@
 /*the @media() query doesn't recognize the value of var(--mobile-screen)*/
 @media (width > 450px) {
 	.popup-container {
-		max-width: var(--mobile-screen);
+		max-width: 60em;
 		height: calc(100vh - 4em);
-		margin: 2em auto;
+	}
+
+	.close-button {
+		height: 7em;
+	}
+
+	.popup-body {
+		margin: 1.75em 1em;
 	}
 }
