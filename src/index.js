@@ -15,7 +15,7 @@ function App() {
 	const AppContainer = document.createElement('div');
 		AppContainer.classList.add('AppContainer');
 
-		// AppContainer.appendChild(UnderConstructionPopup());
+		AppContainer.appendChild(UnderConstructionPopup());
 		AppContainer.appendChild(Header());
 		AppContainer.appendChild(BodyComponent());
 		AppContainer.appendChild(Footer());
