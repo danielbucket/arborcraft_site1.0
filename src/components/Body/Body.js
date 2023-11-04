@@ -6,7 +6,6 @@ export default function BodyComponent() {
 	const BodyComponent = document.createElement('div');
 		BodyComponent.classList.add('body-container');
 
-
 	BodyComponent.appendChild(SlideShow());
 	return BodyComponent;
 };

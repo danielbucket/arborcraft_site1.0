@@ -1,6 +1,9 @@
 import MapContainer from '../GoogleMap/MapContainer';
 import { reviewsStubArr } from './reviewsStub.js';
+const ownerPhoto = require('../../assets/images/selfPhotoDLudwick.jpg');
 import style from './SlideShow.css';
+import './slideshow-portfolio.css';
+import './slideshow-reviews.css';
 
 const leftBtnIcon = require('../../assets/icons/left-arrow-acBlue.png');
 const rightBtnIcon = require('../../assets/icons/right-arrow-acBlue.png');
@@ -43,7 +46,17 @@ const SlideShow = () => {
 	const portfolioBody = () => {
 		const container = document.createElement('div');
 			container.classList.add('portfolio-body-container', 'topic-card-body');
-			container.innerHTML = "Portfolio";
+
+			const photo = new Image();
+				photo.src = ownerPhoto;
+				photo.classList.add('owner-portfolio-img');
+
+		const portfolioText = document.createElement('div');
+			portfolioText.classList.add('portfolio-text');
+			portfolioText.innerHTML = "Daniel Ludwick\<br>Owner/Operator"
+
+		container.appendChild(photo);
+		container.appendChild(portfolioText)
 		return container;
 	};
 
@@ -53,9 +66,6 @@ const SlideShow = () => {
 			container.innerHTML = "Resources";
 		return container;
 	};
-
-
-
 
 	const reviewsBody = (data) => {
 		const reviewsBodyContainer = document.createElement('div');
