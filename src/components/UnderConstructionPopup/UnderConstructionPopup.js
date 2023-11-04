@@ -41,7 +41,7 @@ const popupBody = () => {
 			p1.innerHTML = "Please forgive the hiccups!"
 		const p2 = document.createElement('p');
 			p2.classList.add('popup-body');
-			p2.innerHTML = "This website was made by me from scratch, one line of code at a time. \<br>I'm still making updates."
+			p2.innerHTML = "This website was made by me from scratch, one line of code at a time."
 		const p3 = document.createElement('p');
 			p3.classList.add('popup-body');
 			p3.innerHTML = "If you're interested, click the link below to check out the source code on GitHub.";
