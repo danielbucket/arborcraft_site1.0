@@ -1,6 +1,6 @@
 import MapContainer from '../GoogleMap/MapContainer';
 import { reviewsStubArr } from './reviewsStub.js';
-const ownerPhoto = require('../../assets/images/selfPhotoDLudwick.jpg');
+const ownerPhoto = require('../../assets/images/selfi-min.jpg');
 import style from './SlideShow.css';
 import './slideshow-portfolio.css';
 import './slideshow-reviews.css';
