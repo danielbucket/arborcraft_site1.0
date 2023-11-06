@@ -41,7 +41,7 @@
 
 /*univervaly applied to all card bodies*/
 .slide-topic-card-body {
-	margin: 1.0em .15em .05em .15em;
+	margin: 0.25em .15em .05em .15em;
 	height: var(--body-height);
 	color: var(--ac-brown);
 }
