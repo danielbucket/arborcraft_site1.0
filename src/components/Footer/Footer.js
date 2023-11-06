@@ -1,4 +1,4 @@
-import './style.css';
+import './footer.style.css';
 import footerLogoData from './footerLogoData.js';
 
 const logoCompiler = data => {

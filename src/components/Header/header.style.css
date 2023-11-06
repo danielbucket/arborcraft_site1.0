@@ -3,7 +3,7 @@
 	grid-area: header;
 	grid-template-rows:	[phone] 8em
 											[logo] 5.5em
-											[email] 3.5em;
+											[email] 4.5em;
 }
 
 /* --> PHONE <-- */
@@ -47,7 +47,7 @@
 
 	border: .05em solid var(--ac-brown);
 	border-radius: .25em;
-	padding: 0 2em;
+	padding: 0 1.75em;
 	margin: auto;
 	font-family: IMFell-reg;
 	font-size: 2em;
