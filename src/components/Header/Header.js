@@ -7,8 +7,8 @@ export default function Header() {
 
 	const headerContainer = document.createElement('header');
 		headerContainer.classList.add('header-container');
-		headerContainer.appendChild(phone);
 		headerContainer.appendChild(headerLogo);
+		headerContainer.appendChild(phone);
 		headerContainer.appendChild(email);
 
 	return headerContainer;
