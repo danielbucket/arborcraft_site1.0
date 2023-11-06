@@ -1,57 +1,51 @@
 .slide-show-container {
 	display: grid;
 	grid-area: main;
-	/* using view width (vw) in gtc() breaks the website */
-	grid-template-rows: repeat(6, 50em);
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
-/*	border: 2px solid red;*/
 }
 
 .slide-topic-container {
-	grid-template-rows: 3em 10em;
-	scroll-snap-align: center;
+	display: grid;
+	grid-template-rows: 6em calc(100% - 6em);
+	height: var(--body-height);
+	scroll-snap-align: start;
 	scroll-snap-stop: always;
-
 	text-align: center;
 	font-family: IMFell-reg;
 }
 
 .topic-header {
-	grid-row: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
-	height: 3em;
 	font-family: inherit;
 	font-size: 2.5em;
 	background-color: var(--ac-brown);
 	color: var(--ac-blue);
-
 	border-top: .15rem solid var(--ac-orange);
 	border-bottom: .15rem solid var(--ac-orange);
 }
 
 .topic-body {
-	grid-row: 2;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-
-	height: 42em;
+	justify-content: flex-start;
+	height: 100%;
 }
 
 .topic-card-body {
 	grid-row: 2;
 	margin: 0.25em .15em .05em .15em;
-	height: 40rem;
+	height: var(--body-height);
+	width: 100%;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	font-family: inherit;
-	font-size: 1.5em;
 	color: var(--ac-brown);
 }
