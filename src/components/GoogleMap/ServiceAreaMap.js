@@ -7,8 +7,8 @@ import { mapCenter, goldenCoordinates, mapAreaCoordinates } from './mapCoordinat
 export default function ServiceAreaMap() {
   const markerIcon = document.createElement('img');
     markerIcon.src = mapIcon;
-    markerIcon.style.height = "3em";
-    markerIcon.style.width = "3em";
+    markerIcon.style.height = "5em";
+    markerIcon.style.width = "5em";
 
   const loader = new Loader({
     apiKey: KEY,
@@ -42,6 +42,5 @@ export default function ServiceAreaMap() {
     });
 
     serviceArea.setMap(map);
-
   });
 };

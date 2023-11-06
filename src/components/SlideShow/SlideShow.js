@@ -1,38 +1,29 @@
 import MapContainer from '../GoogleMap/MapContainer';
 import { reviewsStubArr } from './reviewsStub.js';
 const ownerPhoto = require('../../assets/images/selfi-2.jpg');
-import style from './SlideShow.css';
+const acLogo = require('../../assets/logos/arborcraftTree.png');
+import './SlideShow.css';
 import './slideshow-portfolio.css';
 import './slideshow-reviews.css';
-
-const leftBtnIcon = require('../../assets/icons/left-arrow-acBlue.png');
-const rightBtnIcon = require('../../assets/icons/right-arrow-acBlue.png');
-
 
 const SlideShow = () => {
 	const slideShowContainer = document.createElement('div');
 		slideShowContainer.classList.add('slide-show-container');
 
-	const swipeBtnLeft = () => {
-		const leftBtn = new Image();
-			leftBtn.src = leftBtnIcon;
-			leftBtn.classList.add('swipe-button', 'left-btn');
-
-		return leftBtn;			
-	};
-
-	const swipeBtnRight = () => {
-		const rightBtn = new Image();
-			rightBtn.src = rightBtnIcon;
-			rightBtn.classList.add('swipe-button', 'right-btn');
-
-		return rightBtn;
-	};
-
 	const aboutUsBody = () => {
 		const container = document.createElement('div');
 			container.classList.add('about-us-body-container', 'topic-card-body');
-			container.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. Our staff is comprised of educated and experienced individuals who know the importance of safety for themselves as tree workers as well as the safety for you and your property. We base our reputation on doing the job right the first time.";
+
+		const header = document.createElement('div');
+			header.classList.add('about-us-slide-header');
+			header.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. We base our reputation on doing the job right the first time.";
+
+		const logo = new Image();
+			logo.src = acLogo;
+			logo.classList.add('about-us-slide-logo');
+
+		container.appendChild(logo);
+		container.appendChild(header);
 		return container;
 	};
 
@@ -95,14 +86,9 @@ const SlideShow = () => {
 
 		reviewCardsArr.map(i => reviewsBodyContainer.appendChild(i));
 		return reviewsBodyContainer;
-	};// end reviewsBody() returns a single parent element with childnodes
+	};
 
 	const slideData = [
-		{
-			slideName: "service-area",
-			headerText: "Serving Golden, Colorado, \<br>and Denver's western 'burbs",
-			cardElement: MapContainer(),
-		},
 		{
 			slideName: "about-us",
 			headerText: "About Us",
@@ -127,7 +113,12 @@ const SlideShow = () => {
 			slideName: "resources",
 			headerText: "Resources",
 			cardElement: resourcesBody(),
-		}
+		},
+		{
+			slideName: "service-area",
+			headerText: "Serving Golden, Colorado, \<br>and Denver's western 'burbs",
+			cardElement: MapContainer(),
+		},
 	];
 
 	const slideshow = slideData.map(topic => {
@@ -139,8 +130,6 @@ const SlideShow = () => {
 		const topicHeader = document.createElement('div');
 			topicHeader.classList.add('topic-header');
 			topicHeader.innerHTML = headerText;
-			topicHeader.appendChild(swipeBtnLeft());
-			topicHeader.appendChild(swipeBtnRight());
 
 		const topicBody = document.createElement('div');
 			topicBody.classList.add('topic-card-body');

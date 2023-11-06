@@ -1,6 +1,6 @@
 import './index.style.css';
 import Header from './components/Header/Header.js';
-import BodyComponent from './components/Body/Body.js';
+import SlideShow from './components/SlideShow/SlideShow.js';
 import Footer from './components/Footer/Footer.js';
 import { app, analytics } from './firebaseConfig.js';
 
@@ -15,7 +15,7 @@ function App() {
 		AppContainer.classList.add('AppContainer');
 
 		AppContainer.appendChild(Header());
-		AppContainer.appendChild(BodyComponent());
+		AppContainer.appendChild(SlideShow());
 		AppContainer.appendChild(Footer());
 	return AppContainer;
 };

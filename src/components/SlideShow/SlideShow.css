@@ -1,31 +1,18 @@
 .slide-show-container {
 	display: grid;
+	grid-area: main;
 	/* using view width (vw) in gtc() breaks the website */
-	grid-template-columns: repeat(6, 100%);
+	grid-template-rows: repeat(6, 50em);
 	overflow-y: scroll;
-	scroll-snap-type: x mandatory;
-}
-
-.swipe-button {
-	height: 2.75em;
-	width: 1.5em;
-	background-color: var(--ac-brown);
-}
-
-.left-btn {
-	position: absolute;
-	left: 0;
-}
-
-.right-btn {
-	position: absolute;
-	right: 0;
+	scroll-snap-type: y mandatory;
+/*	border: 2px solid red;*/
 }
 
 .slide-topic-container {
 	grid-template-rows: 3em 10em;
 	scroll-snap-align: center;
 	scroll-snap-stop: always;
+
 	text-align: center;
 	font-family: IMFell-reg;
 }

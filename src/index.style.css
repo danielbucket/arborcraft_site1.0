@@ -71,7 +71,7 @@ body {
 /* In the following calc() atrribute, */
 /* 25.25em is the sum of the header and footer height */
 	grid-template-rows: [header] 18em
-											[main] calc(100vh - 25.25em)
+											[main] calc(100vh - 28em)
 											[footer] 10em;
 }
 

@@ -1,19 +1,23 @@
 .footer-container {
 	grid-area: footer;
-	height: 6em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .logo-container {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	justify-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
 }
 
 .logo-image {
 	display: flex;
 	justify-content: center;
 	height: 6em;
-
+	padding: 0 .25em;
+	margin:	auto;
 	transition:
 		height .5s;
 }

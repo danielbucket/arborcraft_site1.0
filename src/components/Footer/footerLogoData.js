@@ -7,12 +7,6 @@ const foooterLogoData = [
 		href: "https://goldenchamber.org/",
 	},
 	{
-		name: "Github",
-		src: require('../../assets/images/github/github-mark.svg'),
-		alt: "Github logo",
-		href: "https://github.com/danielbucket",
-	},
-	{
 		name: "International Society of Aboriculture",
 		src: require('../../assets/images/ISA_members.jpg'),
 		alt: "International Society of Aboriculture",
@@ -25,11 +19,17 @@ const foooterLogoData = [
 		href: "https://nextdoor.com/pages/arborcraft-tree-service-golden-co/",
 	},
 	{
-		name: "Better Business Bureau",
-		src: require('../../assets/images/BBB_logo.png'),
-		alt: "Better Business Bureau logo",
-		href: "",
+		name: "Github",
+		src: require('../../assets/images/github/github-mark.svg'),
+		alt: "Github logo",
+		href: "https://github.com/danielbucket",
 	},
+	// {
+	// 	name: "Better Business Bureau",
+	// 	src: require('../../assets/images/BBB_logo.png'),
+	// 	alt: "Better Business Bureau logo",
+	// 	href: "",
+	// },
 ];
 
 export default foooterLogoData;
