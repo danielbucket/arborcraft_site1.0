@@ -2,9 +2,12 @@ import MapContainer from '../GoogleMap/MapContainer';
 import { reviewsStubArr } from './reviewsStub.js';
 const ownerPhoto = require('../../assets/images/selfi-2.jpg');
 const acLogo = require('../../assets/logos/arborcraftTree.png');
-import './SlideShow.css';
-import './slideshow-portfolio.css';
-import './slideshow-reviews.css';
+import './SlideShow.style.css';
+import './slideshow-aboutUs.style.css';
+import './slideshow-services.style.css';
+import './slideshow-portfolio.style.css';
+import './slideshow-resources.style.css';
+import './slideshow-reviews.style.css';
 
 const SlideShow = () => {
 	const slideShowContainer = document.createElement('div');
@@ -12,18 +15,18 @@ const SlideShow = () => {
 
 	const aboutUsBody = () => {
 		const container = document.createElement('div');
-			container.classList.add('about-us-body-container', 'topic-card-body');
+			container.classList.add('about-us-container', 'topic-card-body');
 
-		const header = document.createElement('div');
-			header.classList.add('about-us-slide-header');
-			header.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. We base our reputation on doing the job right the first time.";
+		const text = document.createElement('div');
+			text.classList.add('about-us-text');
+			text.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. We base our reputation on doing the job right the first time.";
 
 		const logo = new Image();
 			logo.src = acLogo;
-			logo.classList.add('about-us-slide-logo');
+			logo.classList.add('about-us-logo');
 
 		container.appendChild(logo);
-		container.appendChild(header);
+		container.appendChild(text);
 		return container;
 	};
 
@@ -36,11 +39,11 @@ const SlideShow = () => {
 
 	const portfolioBody = () => {
 		const container = document.createElement('div');
-			container.classList.add('portfolio-body-container', 'topic-card-body');
+			container.classList.add('portfolio-container', 'topic-card-body');
 
-			const photo = new Image();
-				photo.src = ownerPhoto;
-				photo.classList.add('owner-portfolio-img');
+		const photo = new Image();
+			photo.src = ownerPhoto;
+			photo.classList.add('portfolio-img');
 
 		const portfolioText = document.createElement('div');
 			portfolioText.classList.add('portfolio-text');
@@ -54,13 +57,13 @@ const SlideShow = () => {
 	const resourcesBody = () => {
 		const container = document.createElement('div');
 			container.classList.add('resources-body-container','topic-card-body');
-			container.innerHTML = "Resources";
+			container.innerHTML = "Resources are coming";
 		return container;
 	};
 
 	const reviewsBody = (data) => {
 		const reviewsBodyContainer = document.createElement('div');
-			reviewsBodyContainer.classList.add('reviews-body-container');
+			reviewsBodyContainer.classList.add('reviews-body-container', 'topic-card-body');
 
 		const reviewCardsArr = data.map((i,num) => {
 			const { review, author } = i;
@@ -82,8 +85,6 @@ const SlideShow = () => {
 			return reviewCardContainer;
 		});
 
-
-
 		reviewCardsArr.map(i => reviewsBodyContainer.appendChild(i));
 		return reviewsBodyContainer;
 	};
@@ -95,6 +96,11 @@ const SlideShow = () => {
 			cardElement: aboutUsBody(),
 		},
 		{
+			slideName: "portfolio",
+			headerText: "Portfolio",
+			cardElement: portfolioBody(),
+		},
+		{
 			slideName: "services",
 			headerText: "Services",
 			cardElement: servicesBody(),
@@ -103,11 +109,6 @@ const SlideShow = () => {
 			slideName: "reviews",
 			headerText: "Reviews",
 			cardElement: reviewsBody(reviewsStubArr),
-		},
-		{
-			slideName: "portfolio",
-			headerText: "Portfolio",
-			cardElement: portfolioBody(),
 		},
 		{
 			slideName: "resources",
@@ -132,7 +133,7 @@ const SlideShow = () => {
 			topicHeader.innerHTML = headerText;
 
 		const topicBody = document.createElement('div');
-			topicBody.classList.add('topic-card-body');
+			topicBody.classList.add('topic-body');
 			topicBody.appendChild(cardElement);
 
 		topicContainer.appendChild(topicHeader);
