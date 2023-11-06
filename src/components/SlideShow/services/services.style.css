@@ -1,0 +1,17 @@
+.services-body-container {
+	display: grid;
+	justify-content: space-evenly;
+	height: 100%;
+}
+
+.service-card-container {
+	margin: .15em 1.25em;
+}
+
+.service-type-header-text {
+	font-size: 2.25rem;
+}
+
+.service-type-body-text {
+	font-size: 1.7rem;
+}

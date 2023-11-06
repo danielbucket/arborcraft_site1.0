@@ -1,10 +1,10 @@
 import { Loader } from '@googlemaps/js-api-loader';
 const KEY = process.env.DEVELOPMENT_GMAPS_KEY;
 
-const mapIcon = require("../../assets/logos/tree_logo.png");
+const mapIcon = require("../../../assets/logos/tree_logo.png");
 import { mapCenter, goldenCoordinates, mapAreaCoordinates } from './mapCoordinates.js';
 
-export default function ServiceAreaMap() {
+export default function serviceAreaMap() {
   const markerIcon = document.createElement('img');
     markerIcon.src = mapIcon;
     markerIcon.style.height = "5em";
