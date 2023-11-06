@@ -1,18 +1,17 @@
 .header-container {
 	display: grid;
 	grid-area: header;
-	grid-template-rows:	[phone] 8em
-											[logo] 5.5em
+	grid-template-rows:	[logo] 8em
+											[phone] 5.5em
 											[email] 4.5em;
 }
 
 /* --> PHONE <-- */
 .phone-number-container {
 	grid-column: 1 / span end;
-	grid-row: 1;
+	grid-row: 2;
 	
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	background-color: var(--ac-green-opaque);
 }
@@ -29,14 +28,13 @@
 .header-logo-container {
 	display: grid;
 	grid-column: 1;
-	grid-row: 2;
+	grid-row: 1;
 }
 
 .header-logo {
-/*	background-image: var(--logo-wo-tree);*/
 	background-size: contain;
 	background-position: center;
-	height: 5.25em;
+	height: 5.75em;
 	margin: auto;
 }
 
