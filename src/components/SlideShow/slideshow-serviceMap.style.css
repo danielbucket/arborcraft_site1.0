@@ -4,3 +4,9 @@
 	border: .125em solid var(--ac-brown);
 	border-radius: .25em;
 }
+
+@media(width > 450px) {
+	.map-container {
+		max-width: 30em;
+	}
+}

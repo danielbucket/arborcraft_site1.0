@@ -1,10 +1,15 @@
-import MapContainer from '../GoogleMap/MapContainer';
 import { reviewsStubArr } from './reviewsStub.js';
+import ServiceAreaMap from '../GoogleMap/ServiceAreaMap.js';
 const ownerPhoto = require('../../assets/images/selfi-2.jpg');
 const acLogo = require('../../assets/logos/arborcraftTree.png');
-import './SlideShow.css';
-import './slideshow-portfolio.css';
-import './slideshow-reviews.css';
+
+import './SlideShow.style.css';
+import './slideshow-aboutUs.style.css';
+import './slideshow-services.style.css';
+import './slideshow-portfolio.style.css';
+import './slideshow-resources.style.css';
+import './slideshow-reviews.style.css';
+import './slideshow-serviceMap.style.css';
 
 const SlideShow = () => {
 	const slideShowContainer = document.createElement('div');
@@ -12,35 +17,35 @@ const SlideShow = () => {
 
 	const aboutUsBody = () => {
 		const container = document.createElement('div');
-			container.classList.add('about-us-body-container', 'topic-card-body');
+			container.classList.add('about-us-container', 'slide-topic-card-body');
 
-		const header = document.createElement('div');
-			header.classList.add('about-us-slide-header');
-			header.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. We base our reputation on doing the job right the first time.";
+		const text = document.createElement('div');
+			text.classList.add('about-us-text');
+			text.innerHTML = "We're not your typical do it fast and do it dirty tree care company. At ArborCraft we take the time to do the job thoroughly and do it well. We base our reputation on doing the job right the first time.";
 
 		const logo = new Image();
 			logo.src = acLogo;
-			logo.classList.add('about-us-slide-logo');
+			logo.classList.add('about-us-logo');
 
 		container.appendChild(logo);
-		container.appendChild(header);
+		container.appendChild(text);
 		return container;
 	};
 
 	const servicesBody = () => {
 		const container = document.createElement('div');
-			container.classList.add('services-body-container', 'topic-card-body');
+			container.classList.add('services-body-container', 'slide-topic-card-body');
 			container.innerHTML = "Tree Pruning, Trimming, Removals, Planting, Nutrition and Care";
 		return container;
 	};
 
 	const portfolioBody = () => {
 		const container = document.createElement('div');
-			container.classList.add('portfolio-body-container', 'topic-card-body');
+			container.classList.add('portfolio-container', 'slide-topic-card-body');
 
-			const photo = new Image();
-				photo.src = ownerPhoto;
-				photo.classList.add('owner-portfolio-img');
+		const photo = new Image();
+			photo.src = ownerPhoto;
+			photo.classList.add('portfolio-img');
 
 		const portfolioText = document.createElement('div');
 			portfolioText.classList.add('portfolio-text');
@@ -53,14 +58,14 @@ const SlideShow = () => {
 
 	const resourcesBody = () => {
 		const container = document.createElement('div');
-			container.classList.add('resources-body-container','topic-card-body');
-			container.innerHTML = "Resources";
+			container.classList.add('resources-body-container','slide-topic-card-body');
+			container.innerHTML = "Resources are coming";
 		return container;
 	};
 
 	const reviewsBody = (data) => {
 		const reviewsBodyContainer = document.createElement('div');
-			reviewsBodyContainer.classList.add('reviews-body-container');
+			reviewsBodyContainer.classList.add('reviews-body-container', 'slide-topic-card-body');
 
 		const reviewCardsArr = data.map((i,num) => {
 			const { review, author } = i;
@@ -82,10 +87,17 @@ const SlideShow = () => {
 			return reviewCardContainer;
 		});
 
-
-
 		reviewCardsArr.map(i => reviewsBodyContainer.appendChild(i));
 		return reviewsBodyContainer;
+	};
+
+	const mapBody = (mapObj) => {
+		const container = document.createElement('div');
+			container.classList.add('map-container', 'topic-card-body');
+			container.id = 'service_map';
+
+		mapObj();
+		return container;
 	};
 
 	const slideData = [
@@ -93,6 +105,11 @@ const SlideShow = () => {
 			slideName: "about-us",
 			headerText: "About Us",
 			cardElement: aboutUsBody(),
+		},
+		{
+			slideName: "portfolio",
+			headerText: "Portfolio",
+			cardElement: portfolioBody(),
 		},
 		{
 			slideName: "services",
@@ -105,11 +122,6 @@ const SlideShow = () => {
 			cardElement: reviewsBody(reviewsStubArr),
 		},
 		{
-			slideName: "portfolio",
-			headerText: "Portfolio",
-			cardElement: portfolioBody(),
-		},
-		{
 			slideName: "resources",
 			headerText: "Resources",
 			cardElement: resourcesBody(),
@@ -117,7 +129,7 @@ const SlideShow = () => {
 		{
 			slideName: "service-area",
 			headerText: "Serving Golden, Colorado, \<br>and Denver's western 'burbs",
-			cardElement: MapContainer(),
+			cardElement: mapBody(ServiceAreaMap),
 		},
 	];
 
@@ -125,21 +137,21 @@ const SlideShow = () => {
 		const { slideName, cardElement, headerText } = topic;
 
 		const topicContainer = document.createElement('div');
-			topicContainer.classList.add('slide-topic-container', slideName + "-container");
+			topicContainer.classList.add('slide-topic-container');
 
 		const topicHeader = document.createElement('div');
-			topicHeader.classList.add('topic-header');
+			topicHeader.classList.add('slide-topic-header');
 			topicHeader.innerHTML = headerText;
 
 		const topicBody = document.createElement('div');
-			topicBody.classList.add('topic-card-body');
+			topicBody.classList.add('slide-topic-body');
 			topicBody.appendChild(cardElement);
 
 		topicContainer.appendChild(topicHeader);
 		topicContainer.appendChild(topicBody);
 
 		return topicContainer;
-	}); // end booty. returns an array of cards
+	});
 
 	slideshow.map(i => slideShowContainer.appendChild(i));
 
