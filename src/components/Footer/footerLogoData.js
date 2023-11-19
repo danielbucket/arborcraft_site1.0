@@ -14,7 +14,7 @@ const foooterLogoData = [
 	},
 	{
 		name: "NextDoor",
-		src: require('../../assets/images/nextdoor_logo.jpg'),
+		src: require('../../assets/icons/nextdoor.png'),
 		alt: "Next door logo",
 		href: "https://nextdoor.com/pages/arborcraft-tree-service-golden-co/",
 	},
