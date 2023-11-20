@@ -9,11 +9,12 @@ export const portfolio = () => {
 		photo.src = ownerPhoto;
 		photo.classList.add('portfolio-img');
 
-	const portfolioText = document.createElement('div');
-		portfolioText.classList.add('portfolio-text');
-		portfolioText.innerHTML = "Daniel Ludwick\<br>Owner/Operator"
+	const contactText = document.createElement('div');
+		contactText.classList.add('portfolio-text');
+		contactText.innerHTML = "Daniel Ludwick\<br>Owner/Operator";
 
 	container.appendChild(photo);
-	container.appendChild(portfolioText)
+	container.appendChild(contactText);
+
 	return container;
 };

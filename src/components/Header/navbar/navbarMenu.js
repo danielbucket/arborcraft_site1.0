@@ -1,6 +1,6 @@
 
 import "./navbarMenu.style.css";
-import navbarData from '../navbarData.js';
+import navbarData from './navbarData.js';
 const menuIcon = require('../../../assets/icons/menu-boxed.svg');
 
 const navbarCompiler = data => {

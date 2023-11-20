@@ -3,22 +3,27 @@ import { reviews } from './reviews/reviews.js';
 import { aboutUs } from './aboutUs/aboutUs.js';
 import { portfolio } from './portfolio/portfolio.js';
 import { resources } from './resources/resources.js';
+import { contactForm } from './contactForm/contactForm.js';
 import { googleMap } from './googleMap/googleMap.js';
 import './slideShow.style.css';
 
 const SlideShow = () => {
 	const slideShowContainer = document.createElement('div');
 		slideShowContainer.classList.add('slide-show-container');
-
 	const slideData = [
+		{
+			slideName: "contact-form",
+			headerText: "Contact Us",
+			cardElement: new contactForm().requestForm(),
+		},
 		{
 			slideName: "about-us",
 			headerText: "About Us",
 			cardElement: aboutUs(),
 		},
 		{
-			slideName: "portfolio",
-			headerText: "Portfolio",
+			slideName: "contact",
+			headerText: "Contact",
 			cardElement: portfolio(),
 		},
 		{
