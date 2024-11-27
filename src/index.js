@@ -2,7 +2,6 @@ import './index.style.css';
 import Header from './components/Header/Header.js';
 import SlideShow from './components/SlideShow/SlideShow.js';
 import Footer from './components/Footer/Footer.js';
-import { app, analytics } from './firebaseConfig.js';
 
 
 if (process.env.NODE_ENV !== 'production') {
