@@ -11,7 +11,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'ArboCraft Tree',
+      title: 'ArborCraft Tree',
     }),
     new FaviconsWebpackPlugin({
       logo: './src/assets/logos/tree_logo.png',

@@ -1,9 +1,12 @@
 .about-us-container {
-	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .about-us-logo {
-	height: 20em;
+	width: 30rem;
+	margin: 2rem 0;
 }
 
 .about-us-text {

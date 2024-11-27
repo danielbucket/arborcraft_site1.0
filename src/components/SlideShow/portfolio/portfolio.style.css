@@ -2,8 +2,9 @@
 }
 
 .portfolio-img {
-	height: 20em;
+	height: 30em;
 	border-radius: 1em;
+	margin: 2rem 0;
 }
 
 .portfolio-text {

@@ -33,18 +33,11 @@
 
 	--elm-climb:				url('./assets/images/elmClimb.jpg');
 	--logo-wo-tree:			url('./assets/logos/arborcraft.png');
-	--logo-with-tree:		url('./assets/logos/ArborCraft_extended.png');
 
 	--body-height: calc(100vh - 28em);
 }
 
 * {
-	/*
-	Setting the margin property to 0 here applies it to
-	all the elements, but it does not carry the same effect
-	when apllied to the html element.
-	Why not?
-	*/
 	margin: 0;
 }
 
@@ -69,13 +62,6 @@ body {
 
 .AppContainer {
 	height: 100vh;
-	display: grid;
-/* In the following calc() atrribute, */
-/* 25.25em is the sum of the header and footer height */
-	grid-template-rows: [header] 18em
-											[main] var(--body-height)
-											[footer] 10em;
-}
-
-.main-page-layout {
+	display: flex;
+	flex-direction: column;
 }

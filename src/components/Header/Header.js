@@ -1,15 +1,28 @@
-import './header.style.css';
-import headerLogo from './headerLogo/headerLogo.js';
-import contactInfo from './contactInfo/contactInfo.js';
+import './header.style.css'
+const icon_noTree = require('../../assets/logos/arborcraft.png')
+import contactInfo from './contactInfo/contactInfo.js'
 
 export default function Header() {
-	const { phone, email } = contactInfo;
+	const { email } = contactInfo
 
-	const headerContainer = document.createElement('header');
-		headerContainer.classList.add('header-container');
-		headerContainer.appendChild(headerLogo);
-		headerContainer.appendChild(phone);
-		headerContainer.appendChild(email);
+	const headerContainer = document.createElement('div')
+		headerContainer.classList.add('header-container')
+		
+	const logo = new Image()
+		logo.classList.add('header-logo')
+		logo.src = icon_noTree
+		
+	const logoContainer = document.createElement('div')
+		logoContainer.classList.add('header-logo-container')
+		logoContainer.appendChild(logo)
+		
+	const emailContainer = document.createElement('div')
+		emailContainer.classList.add('email-container')
+		emailContainer.appendChild(email)
 
-	return headerContainer;
-};
+		
+	headerContainer.appendChild(logoContainer)
+	headerContainer.appendChild(emailContainer)
+
+	return headerContainer
+}

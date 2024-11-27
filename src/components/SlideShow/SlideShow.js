@@ -1,14 +1,14 @@
-import { services } from './services/services.js';
-import { reviews } from './reviews/reviews.js';
-import { aboutUs } from './aboutUs/aboutUs.js';
-import { portfolio } from './portfolio/portfolio.js';
-import { resources } from './resources/resources.js';
-import { googleMap } from './googleMap/googleMap.js';
-import './slideShow.style.css';
+import { services } from './services/services.js'
+import { reviews } from './reviews/reviews.js'
+import { aboutUs } from './aboutUs/aboutUs.js'
+import { portfolio } from './portfolio/portfolio.js'
+import { resources } from './resources/resources.js'
+import { googleMap } from './googleMap/googleMap.js'
+import './slideShow.style.css'
 
 const SlideShow = () => {
-	const slideShowContainer = document.createElement('div');
-		slideShowContainer.classList.add('slide-show-container');
+	const slideShowContainer = document.createElement('div')
+		slideShowContainer.classList.add('slide-show-container')
 
 	const slideData = [
 		{
@@ -39,33 +39,33 @@ const SlideShow = () => {
 		{
 			slideName: "service-area",
 			headerText: "Serving Golden, Colorado, \<br>and Denver's western 'burbs",
-			cardElement: googleMap(),
-		},
-	];
+			cardElement: googleMap()
+		}
+	]
 
 	const slideshow = slideData.map(topic => {
-		const { slideName, cardElement, headerText } = topic;
+		const { slideName, cardElement, headerText } = topic
 
-		const topicContainer = document.createElement('div');
-			topicContainer.classList.add('slide-topic-container');
+		const topicContainer = document.createElement('div')
+			topicContainer.classList.add('slide-topic-container')
 
-		const topicHeader = document.createElement('div');
-			topicHeader.classList.add('slide-topic-header');
-			topicHeader.innerHTML = headerText;
+		const topicHeader = document.createElement('div')
+			topicHeader.classList.add('slide-topic-header')
+			topicHeader.innerHTML = headerText
 
-		const topicBody = document.createElement('div');
-			topicBody.classList.add('slide-topic-body');
-			topicBody.appendChild(cardElement);
+		const topicBody = document.createElement('div')
+			topicBody.classList.add('slide-topic-body')
+			topicBody.appendChild(cardElement)
 
-		topicContainer.appendChild(topicHeader);
-		topicContainer.appendChild(topicBody);
+		topicContainer.appendChild(topicHeader)
+		topicContainer.appendChild(topicBody)
 
-		return topicContainer;
-	});
+		return topicContainer
+	})
 
-	slideshow.map(i => slideShowContainer.appendChild(i));
+	slideshow.map(i => slideShowContainer.appendChild(i))
 
-	return slideShowContainer;
-};
+	return slideShowContainer
+}
 
-export default SlideShow;
+export default SlideShow

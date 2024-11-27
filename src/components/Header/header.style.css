@@ -1,54 +1,36 @@
 .header-container {
-	display: grid;
-	grid-area: header;
-	grid-template-rows:	[logo] 8em
-											[phone] 5.5em
-											[email] 4.5em;
-}
-
-/* --> PHONE <-- */
-.phone-number-container {
-	grid-column: 1 / span end;
-	grid-row: 2;
-	
 	display: flex;
-	justify-content: center;
-	background-color: var(--ac-green-opaque);
-}
-
-.phone-number {
-	font-family: IMFell-ital;
-	font-size: 4em;
-	font-weight: 600;
-	color: var(--ac-brown);
-	text-decoration: none;
+	flex-direction: column;
 }
 
 /* --> LOGO <-- */
 .header-logo-container {
-	display: grid;
-	grid-column: 1;
-	grid-row: 1;
+	height: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .header-logo {
-	background-size: contain;
-	background-position: center;
-	height: 5.4em;
+	width: 95%;
 	margin: auto;
 }
 
 /* --> EMAIL <-- */
-.email {
-	display: grid;
-	grid-row: 3;
+.email-container {
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-	border: .05em solid var(--ac-brown);
-	border-radius: .25em;
-	padding: 0 1.75em;
+.email {
+	border: .05rem solid var(--ac-brown);
+	border-radius: .25rem;
+	padding: 0 1.75rem;
 	margin: auto;
 	font-family: IMFell-reg;
-	font-size: 2em;
+	font-size: 2rem;
 	color: var(--ac-brown);
 	text-decoration: none;
 }
@@ -84,13 +66,13 @@
 	justify-content: center;
 
 	font-family: RobotoFlex;
-	letter-spacing: .1em;
-	font-size: 1.4em;
+	letter-spacing: .1rem;
+	font-size: 1.4rem;
 	font-weight: 500;
 	color: var(--ac-green);
 	box-shadow: 0 0 var(--ac-green);
-	border-radius: .12em;
-	padding: 0.01em 0.01em;
+	border-radius: .12rem;
+	padding: 0.01rem 0.01rem;
 
 	transition:
 		padding .75s,
@@ -102,13 +84,12 @@
 }
 
 .navbar-option:hover {
-	font-size: 2em;
+	font-size: 2rem;
 	font-weight: 725;
-	padding: 0.01em 0.18em;
+	padding: 0.01rem 0.18rem;
 	margin-top: auto;
 	cursor: pointer;
-	box-shadow: 0 0 0.1em 0.18em var(--ac-green-opaque);
-
+	box-shadow: 0 0 0.1rem 0.18rem var(--ac-green-opaque);
 }
 
 

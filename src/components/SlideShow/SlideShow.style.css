@@ -1,6 +1,6 @@
 .slide-show-container {
+	flex-grow: 1;
 	display: grid;
-	grid-area: main;
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
 }
