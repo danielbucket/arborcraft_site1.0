@@ -12,12 +12,12 @@ const foooterLogoData = [
 		alt: "International Society of Aboriculture",
 		href: "https://www.isa-arbor.com/",
 	},
-	{
-		name: "NextDoor",
-		src: require('../../assets/images/nextdoor_logo.jpg'),
-		alt: "Next door logo",
-		href: "https://nextdoor.com/pages/arborcraft-tree-service-golden-co/",
-	},
+	// {
+	// 	name: "NextDoor",
+	// 	src: require('../../assets/images/nextdoor_logo.jpg'),
+	// 	alt: "Next door logo",
+	// 	href: "https://nextdoor.com/pages/arborcraft-tree-service-golden-co/",
+	// },
 	{
 		name: "Github",
 		src: require('../../assets/images/github/github-mark.svg'),
