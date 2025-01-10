@@ -1,7 +1,7 @@
 const serviceEndPoint = "https://formsubmit.co/admin@arborcrafttreeservice.com";
 import { v4 as uuidv4 } from 'uuid';
-const username = 'danieljbucket@gmail.com';
-const password = 'D1EA804E30D5C5D9F93EFF333ACF2BD67B8C';
+const username = process.env.EMAIL_ADDR;
+const password = process.env.EMAIL_PASS;
 
 function submitContactForm(formObj) {
 	Email.send({
