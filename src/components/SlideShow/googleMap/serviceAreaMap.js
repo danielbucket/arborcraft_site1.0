@@ -1,5 +1,5 @@
 import { Loader } from '@googlemaps/js-api-loader';
-const KEY = process.env.DEVELOPMENT_GMAPS_KEY;
+const KEY = process.env.ARBORCRAFT_GMAPS_KEY;
 
 const mapIcon = require("../../../assets/logos/tree_logo.png");
 import { mapCenter, goldenCoordinates, mapAreaCoordinates } from './mapCoordinates.js';

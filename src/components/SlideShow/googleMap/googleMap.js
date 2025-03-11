@@ -1,5 +1,4 @@
 import serviceAreaMap from './serviceAreaMap.js';
-import style from './serviceAreaMap.style.css';
 
 export const googleMap = () => {
 	const container = document.createElement('div');
